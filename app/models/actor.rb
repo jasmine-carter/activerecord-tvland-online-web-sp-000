@@ -12,7 +12,7 @@ class Actor < ActiveRecord::Base
   def list_roles
     #for every character, return its name, then find show name by id
     characters.collect do |character|
-      "#{character.name} - #{character.show}"
+      "#{character.name} - #{character.shows}"
     end
   end
 
