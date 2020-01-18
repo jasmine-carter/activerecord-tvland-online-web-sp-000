@@ -11,10 +11,8 @@ class Actor < ActiveRecord::Base
 
   def list_roles
     #for every character, return its name, then find show name by id
-    a = []
-      self.characters.each do
-      a << "{character.name} - #{Show.find_by(character.show_id).name}"
-    a
+    characters.collect do |character|
+      "#{character.name} - #{character.show}"
     end
   end
 end
