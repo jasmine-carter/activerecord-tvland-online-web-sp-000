@@ -16,7 +16,5 @@ class Actor < ActiveRecord::Base
     end
   end
 
-  def list_all_shows_and_characters
 
-  end
 end
